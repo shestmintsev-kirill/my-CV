@@ -96,7 +96,6 @@ export default {
     transition: all 0.5s;
     border-radius: 15px;
     border: 0;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
     background: rgb(201, 201, 201);
 
     a {
