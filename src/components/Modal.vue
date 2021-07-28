@@ -51,7 +51,6 @@
                     :class="{ disabledBtn: isDisabled }"
                     :disabled="isDisabled"
                     class="modal-default-button send"
-                    @click.stop="send"
                   >
                     {{ $t("Modal.send") }}
                   </button>
@@ -93,7 +92,6 @@ export default {
         window.scrollTo(x, y);
       };
     },
-
     enableScrolling() {
       window.onscroll = () => {};
     },
