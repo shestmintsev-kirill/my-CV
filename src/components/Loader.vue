@@ -1,5 +1,5 @@
 <template>
-  <div v-show="loading" class="container">
+  <div class="container">
     <div class="circle circle-1"></div>
     <div class="circle circle-2"></div>
     <div class="circle circle-3"></div>
@@ -11,18 +11,11 @@
 <script>
 export default {
   name: "Loader",
-  data: () => ({
-    loading: true
-  }),
   mounted() {
-    this.showToggle();
+    document.querySelector("body").style.overflow = "hidden";
   },
-  methods: {
-    showToggle() {
-      setTimeout(() => {
-        this.loading = false;
-      }, 1000);
-    }
+  beforeDestroy() {
+    document.querySelector("body").style.overflow = null;
   }
 };
 </script>
@@ -35,8 +28,11 @@ $color: #696969, #797979, #b3b3b3, #d3d3d3, #e0e0e0;
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100vw;
+  background-color: rgb(248, 248, 248);
   overflow: hidden;
-  z-index: 9999;
+  z-index: 999;
+  position: fixed;
 }
 
 $circle-size: 20px;
