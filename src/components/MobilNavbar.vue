@@ -2,11 +2,7 @@
   <transition name="mobil">
     <nav class="mobilnav">
       <div class="mobilnav-list">
-        <ul
-          @click="$emit('unvisible'), enableScrolling()"
-          v-scroll-spy-active
-          v-scroll-spy-link
-        >
+        <ul @click="$emit('unvisible')" v-scroll-spy-active v-scroll-spy-link>
           <li v-for="link in links" :key="link">
             <a>{{ $t(link) }}</a>
           </li>
@@ -14,13 +10,9 @@
       </div>
       <div class="mobile-lang">
         <div class="close">
-          <img
-            @click="$emit('back'), enableScrolling()"
-            src="@/assets/close.png"
-            alt="close"
-          />
+          <img @click="$emit('back')" src="@/assets/close.png" alt="close" />
         </div>
-        <div @click="$emit('unvisible'), enableScrolling()" class="link">
+        <div @click="$emit('unvisible')" class="link">
           <a @click.prevent="setLocale('ru')" href="/">RU</a> |
           <a @click.prevent="setLocale('en')" href="/">ENG</a>
         </div>
@@ -42,23 +34,15 @@ export default {
     ]
   }),
   mounted() {
-    this.disableScrolling();
+    document.querySelector("body").style.overflow = "hidden";
+  },
+  beforeDestroy() {
+    document.querySelector("body").style.overflow = null;
   },
   methods: {
     setLocale(locale) {
       this.$i18n.locale = locale;
       localStorage.lang = JSON.stringify(locale);
-    },
-    disableScrolling() {
-      let x = window.scrollX;
-      let y = window.scrollY;
-      window.onscroll = () => {
-        window.scrollTo(x, y);
-      };
-    },
-
-    enableScrolling() {
-      window.onscroll = () => {};
     }
   }
 };

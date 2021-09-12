@@ -1,10 +1,7 @@
 <template>
   <transition name="modal">
-    <div @click.self="$emit('close'), enableScrolling()" class="modal-mask">
-      <div
-        @click.self="$emit('close'), enableScrolling()"
-        class="modal-wrapper"
-      >
+    <div @click.self="$emit('close')" class="modal-mask">
+      <div @click.self="$emit('close')" class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
             <slot name="header">
@@ -56,7 +53,7 @@
                   </button>
                   <button
                     class="modal-default-button close"
-                    @click.prevent="$emit('close'), enableScrolling()"
+                    @click.prevent="$emit('close')"
                   >
                     {{ $t("Modal.close") }}
                   </button>
@@ -81,20 +78,13 @@ export default {
     isDisabled: true
   }),
   mounted() {
-    this.disableScrolling();
+    document.querySelector("body").style.overflow = "hidden";
     this.focusInput();
   },
+  beforeDestroy() {
+    document.querySelector("body").style.overflow = null;
+  },
   methods: {
-    disableScrolling() {
-      let x = window.scrollX;
-      let y = window.scrollY;
-      window.onscroll = () => {
-        window.scrollTo(x, y);
-      };
-    },
-    enableScrolling() {
-      window.onscroll = () => {};
-    },
     confirm(e, num) {
       e.length > num ? (this.isDisabled = false) : (this.isDisabled = true);
     },
