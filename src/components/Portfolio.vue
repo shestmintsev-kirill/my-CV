@@ -67,14 +67,6 @@ export default {
     getImage(img) {
       return require("@/assets/" + img);
     },
-    prevSlide() {
-      if (this.currentSlide > 0) {
-        this.currentSlide--;
-      }
-    },
-    nextSlide() {
-      this.currentSlide++;
-    },
     arrowCarouselWidth() {
       if (document.documentElement.clientWidth < 566) {
         this.settings.arrows = false;

@@ -15,7 +15,7 @@
 import HomePage from "@/components/HomePage.vue";
 import AboutPage from "@/components/AboutPage.vue";
 import SkillsPage from "@/components/SkillsPage.vue";
-import PortfolioPage from "@/components/PortfolioPage.vue";
+import PortfolioPage from "@/components/Portfolio/PortfolioPage.vue";
 import ContactPage from "@/components/ContactPage.vue";
 import Loader from "@/components/Loader.vue";
 
