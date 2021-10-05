@@ -46,6 +46,7 @@ $circle-margin: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: bounce 500ms alternate infinite cubic-bezier(0.2, 0.65, 0.6, 1);
 
   &:before {
     content: "";
@@ -53,13 +54,15 @@ $circle-margin: 7px;
     height: $circle-size;
     border-radius: 50%;
     opacity: 0.7;
-    animation: scale 2s infinite cubic-bezier(0, 0, 0.5, 1);
+    animation: scale 1s infinite cubic-bezier(0, 0, 0.5, 1);
   }
 }
 
 @for $i from 1 through 5 {
   .circle-#{$i} {
     background-color: nth($color, $i);
+    animation-delay: 100ms * $i;
+
     &:before {
       background-color: nth($color, $i);
       animation-delay: 100ms * $i;
@@ -78,6 +81,16 @@ $circle-margin: 7px;
   78%,
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-20px);
   }
 }
 </style>
