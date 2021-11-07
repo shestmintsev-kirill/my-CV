@@ -93,4 +93,26 @@ $circle-margin: 7px;
     transform: translateY(-20px);
   }
 }
+
+/* #app {
+  background-image: linear-gradient(
+    to bottom right,
+    #f1fffc 0%,
+    #ebf3ff 40%,
+    #f9ecff 60%,
+    #ffecfb 100%
+  );
+
+  background-size: 200% 200%;
+  animation: movingGradient 5s linear infinite alternate;
+}
+
+@keyframes movingGradient {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 100%;
+  }
+} */
 </style>
