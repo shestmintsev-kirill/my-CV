@@ -9,7 +9,7 @@
       <a href="mailto:1kirillmihail1@gmail.com">1kirillmihail1@gmail.com</a>
     </div>
     <div class="section-contact-btn">
-      <button id="show-modal" @click="showModal = true" class="animation">
+      <button id="show-modal" class="animation" @click="showModal = true">
         {{ $t('ContactPage.btn') }}
       </button>
       <Modal v-if="showModal" @close="showModal = false">
@@ -22,12 +22,10 @@
         :key="item.title"
         target="_blank"
         :href="item.link"
-        ><img :src="getImage(`${item.icon}`)" alt="sosial"
-      /></a>
+        ><img :src="getImage(`${item.icon}`)" alt="sosial" /></a>
     </div>
     <div class="section-contact-footer">
-      <span
-        >{{ $t('ContactPage.sosial') }}<br />
+      <span>{{ $t('ContactPage.sosial') }}<br />
         <div>
           <a
             v-for="item in sosial"

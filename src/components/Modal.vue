@@ -1,7 +1,7 @@
 <template>
   <transition name="modal">
-    <div @click.self="$emit('close')" class="modal-mask">
-      <div @click.self="$emit('close')" class="modal-wrapper">
+    <div class="modal-mask" @click.self="$emit('close')">
+      <div class="modal-wrapper" @click.self="$emit('close')">
         <div class="modal-container">
           <div class="modal-header">
             <slot name="header"> default header </slot>
@@ -10,33 +10,33 @@
             <slot name="body">
               <form action="https://formspree.io/f/mnqowzgd" method="POST">
                 <input
+                  v-model="name"
                   ref="input"
                   class="input-Name"
                   name="name"
                   type="text"
                   :placeholder="$t('Modal.name')"
-                  v-model="name"
                 />
                 <input
+                  v-model="email"
                   class="input-Email"
                   type="email"
                   name="_replyto"
                   :placeholder="$t('Modal.email')"
-                  v-model="email"
                   required
                 />
                 <input
+                  v-model="tel"
                   class="input-Tel"
                   name="tel"
                   :placeholder="$t('Modal.tel')"
-                  v-model="tel"
                 />
                 <textarea
+                  v-model="message"
                   class="input-Message"
                   type="text"
                   name="message"
                   :placeholder="$t('Modal.message')"
-                  v-model="message"
                   required
                 />
                 <div class="modal-footer">
@@ -75,6 +75,11 @@ export default {
     message: null,
     isDisabled: true
   }),
+  watch: {
+    message(target) {
+      this.confirm(target, 3);
+    }
+  },
   mounted() {
     document.querySelector('body').style.overflow = 'hidden';
     this.focusInput();
@@ -88,11 +93,6 @@ export default {
     },
     focusInput() {
       this.$refs.input.focus();
-    }
-  },
-  watch: {
-    message(target) {
-      this.confirm(target, 3);
     }
   }
 };

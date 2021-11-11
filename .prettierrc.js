@@ -1,8 +1,8 @@
 module.exports = {
-  trailingComma: "none",
+  trailingComma: 'none',
   tabWidth: 2,
   semi: true,
   singleQuote: true,
   bracketSpacing: true,
-  arrowParens: "avoid"
+  arrowParens: 'avoid'
 };

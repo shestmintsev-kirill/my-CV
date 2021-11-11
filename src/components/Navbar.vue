@@ -1,5 +1,5 @@
 <template>
-  <nav @scroll="handleScroll()" :class="{ scroll: isScroll }" class="nav">
+  <nav :class="{ scroll: isScroll }" class="nav" @scroll="handleScroll()">
     <ul v-scroll-spy-active v-scroll-spy-link>
       <li v-for="link in links" :key="link">
         <a>{{ $t(link) }}</a>
@@ -22,6 +22,12 @@ export default {
     isScroll: false,
     scrollPosition: 0
   }),
+  created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 
   methods: {
     handleScroll() {
@@ -36,12 +42,6 @@ export default {
       }
       this.scrollPosition = window.pageYOffset;
     }
-  },
-  created() {
-    window.addEventListener('scroll', this.handleScroll);
-  },
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>

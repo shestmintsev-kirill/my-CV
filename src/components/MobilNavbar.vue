@@ -2,7 +2,7 @@
   <transition name="mobil">
     <nav class="mobilnav">
       <div class="mobilnav-list">
-        <ul @click="$emit('unvisible')" v-scroll-spy-active v-scroll-spy-link>
+        <ul v-scroll-spy-active v-scroll-spy-link @click="$emit('unvisible')">
           <li v-for="link in links" :key="link">
             <a>{{ $t(link) }}</a>
           </li>
@@ -10,11 +10,11 @@
       </div>
       <div class="mobile-lang">
         <div class="close">
-          <img @click="$emit('back')" src="@/assets/close.png" alt="close" />
+          <img src="@/assets/close.png" alt="close" @click="$emit('back')" />
         </div>
-        <div @click="$emit('unvisible')" class="link">
-          <a @click.prevent="setLocale('ru')" href="/">RU</a> |
-          <a @click.prevent="setLocale('en')" href="/">ENG</a>
+        <div class="link" @click="$emit('unvisible')">
+          <a href="/" @click.prevent="setLocale('ru')">RU</a> |
+          <a href="/" @click.prevent="setLocale('en')">ENG</a>
         </div>
       </div>
     </nav>

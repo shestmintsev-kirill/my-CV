@@ -9,15 +9,15 @@
             <i18n path="HomePage.name"><br slot="break" /></i18n>
           </h1>
         </div>
-        <div @click="navClick" class="icon">
+        <div class="icon" @click="navClick">
           <img class="image-icon" src="@/assets/menu.png" alt="menu" />
         </div>
         <div class="profession">
           <i18n path="HomePage.profession"><br slot="break" /></i18n>
         </div>
         <div class="lang">
-          <a @click.prevent="setLocale('ru')" href="/">RU</a> |
-          <a @click.prevent="setLocale('en')" href="/">ENG</a>
+          <a href="/" @click.prevent="setLocale('ru')">RU</a> |
+          <a href="/" @click.prevent="setLocale('en')">ENG</a>
         </div>
       </div>
       <div class="section-header-name-photo">

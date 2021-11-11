@@ -6,8 +6,8 @@
     <div v-for="(project, i) in portfolio" :key="i" class="section-inner">
       <div class="section-partfolio-project">
         <div
-          @click.prevent="$emit('show-modal', project)"
           class="section-partfolio-project-promo"
+          @click.prevent="$emit('show-modal', project)"
         >
           <a><img :src="getImage(`${project.imgView}`)" alt="onlinestore" /></a>
           <div class="after">

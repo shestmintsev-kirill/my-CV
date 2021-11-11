@@ -3,13 +3,13 @@ module.exports = {
   env: {
     node: true,
   },
-  extends: ["plugin:vue/essential", "eslint:recommended"],
+  extends: ['plugin:vue/essential', 'eslint:recommended'],
   parserOptions: {
-    parser: "babel-eslint",
+    parser: 'babel-eslint',
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'camelcase': [0, {
       properties: 'never'
     }],
@@ -55,7 +55,6 @@ module.exports = {
       SwitchCase: 1
     }],
     'semi': [2, 'always'],
-    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     'space-before-function-paren': [2, {
       anonymous: 'never',
       named: 'never'
@@ -66,12 +65,12 @@ module.exports = {
       attribute: 1,
       closeBracket: 0
     }],
-    "vue / max-attributes-per-line": [4,
+    'vue / max-attributes-per-line': [0,
       {
-        "singleline": 4,
-        "multiline": {
-          "max": 1,
-          "allowFirstLine": true
+        singleline: 4,
+        multiline: {
+          max: 1,
+          allowFirstLine: true
         }
       }
     ],

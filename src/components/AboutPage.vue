@@ -9,13 +9,12 @@
       </i18n>
       <span>
         <a
-          class="section-about-description-link"
           v-for="certificate in certificates"
           :key="certificate.title"
+          class="section-about-description-link"
           target="_blank"
           :href="certificate.link"
-          >{{ certificate.title }}</a
-        >
+          >{{ certificate.title }}</a>
         <br /><br />
         {{ $t('AboutPage.aboutNext') }}
       </span>
