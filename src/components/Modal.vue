@@ -4,9 +4,7 @@
       <div @click.self="$emit('close')" class="modal-wrapper">
         <div class="modal-container">
           <div class="modal-header">
-            <slot name="header">
-              default header
-            </slot>
+            <slot name="header"> default header </slot>
           </div>
           <div class="modal-body">
             <slot name="body">
@@ -49,13 +47,13 @@
                     :disabled="isDisabled"
                     class="modal-default-button send"
                   >
-                    {{ $t("Modal.send") }}
+                    {{ $t('Modal.send') }}
                   </button>
                   <button
                     class="modal-default-button close"
                     @click.prevent="$emit('close')"
                   >
-                    {{ $t("Modal.close") }}
+                    {{ $t('Modal.close') }}
                   </button>
                 </div>
               </form>
@@ -69,7 +67,7 @@
 
 <script>
 export default {
-  name: "Modal",
+  name: 'Modal',
   data: () => ({
     name: null,
     email: null,
@@ -78,11 +76,11 @@ export default {
     isDisabled: true
   }),
   mounted() {
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector('body').style.overflow = 'hidden';
     this.focusInput();
   },
   beforeDestroy() {
-    document.querySelector("body").style.overflow = null;
+    document.querySelector('body').style.overflow = null;
   },
   methods: {
     confirm(e, num) {
@@ -101,7 +99,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   @include font-eng;
   @include font-ru;

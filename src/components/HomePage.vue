@@ -6,14 +6,14 @@
       <div class="section-header-name-me">
         <div class="name">
           <h1>
-            <i18n path="HomePage.name"><br slot="break"/></i18n>
+            <i18n path="HomePage.name"><br slot="break" /></i18n>
           </h1>
         </div>
         <div @click="navClick" class="icon">
           <img class="image-icon" src="@/assets/menu.png" alt="menu" />
         </div>
         <div class="profession">
-          <i18n path="HomePage.profession"><br slot="break"/></i18n>
+          <i18n path="HomePage.profession"><br slot="break" /></i18n>
         </div>
         <div class="lang">
           <a @click.prevent="setLocale('ru')" href="/">RU</a> |
@@ -28,11 +28,11 @@
 </template>
 
 <script>
-import Navbar from "@/components/Navbar.vue";
-import MobilNavbar from "@/components/MobilNavbar.vue";
+import Navbar from '@/components/Navbar.vue';
+import MobilNavbar from '@/components/MobilNavbar.vue';
 
 export default {
-  name: "HomePage",
+  name: 'HomePage',
   components: {
     Navbar,
     MobilNavbar
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   position: relative;
 }

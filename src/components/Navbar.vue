@@ -10,14 +10,14 @@
 
 <script>
 export default {
-  name: "Navbar",
+  name: 'Navbar',
   data: () => ({
     links: [
-      "Navbar.home",
-      "Navbar.about",
-      "Navbar.skills",
-      "Navbar.portfolio",
-      "Navbar.contact"
+      'Navbar.home',
+      'Navbar.about',
+      'Navbar.skills',
+      'Navbar.portfolio',
+      'Navbar.contact'
     ],
     isScroll: false,
     scrollPosition: 0
@@ -38,16 +38,16 @@ export default {
     }
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .nav {
   position: fixed;

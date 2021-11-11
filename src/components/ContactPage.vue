@@ -1,19 +1,19 @@
 <template>
   <footer class="section-outer section-contact">
     <div class="section-contact-title">
-      <span>{{ $t("ContactPage.title") }}</span>
+      <span>{{ $t('ContactPage.title') }}</span>
     </div>
     <div class="section-contact-text">
-      <span>{{ $t("ContactPage.description") }}</span>
+      <span>{{ $t('ContactPage.description') }}</span>
       <a href="tel:+79999679614">+7(999)-967-96-14</a>
       <a href="mailto:1kirillmihail1@gmail.com">1kirillmihail1@gmail.com</a>
     </div>
     <div class="section-contact-btn">
       <button id="show-modal" @click="showModal = true" class="animation">
-        {{ $t("ContactPage.btn") }}
+        {{ $t('ContactPage.btn') }}
       </button>
       <Modal v-if="showModal" @close="showModal = false">
-        <h3 slot="header">{{ $t("ContactPage.modalTitle") }}</h3>
+        <h3 slot="header">{{ $t('ContactPage.modalTitle') }}</h3>
       </Modal>
     </div>
     <div class="section-contact-sosial">
@@ -27,7 +27,7 @@
     </div>
     <div class="section-contact-footer">
       <span
-        >{{ $t("ContactPage.sosial") }}<br />
+        >{{ $t('ContactPage.sosial') }}<br />
         <div>
           <a
             v-for="item in sosial"
@@ -45,10 +45,10 @@
 </template>
 
 <script>
-import Modal from "@/components/Modal";
+import Modal from '@/components/Modal';
 
 export default {
-  name: "ContactPage",
+  name: 'ContactPage',
   components: {
     Modal
   },
@@ -56,37 +56,37 @@ export default {
     showModal: false,
     sosial: {
       vk: {
-        title: "VK",
-        link: "https://vk.com/kir9i_l2",
-        icon: "vk.png"
+        title: 'VK',
+        link: 'https://vk.com/kir9i_l2',
+        icon: 'vk.png'
       },
       instagram: {
-        title: "Instagram",
-        link: "https://www.instagram.com/kirilljora",
-        icon: "instagram.png"
+        title: 'Instagram',
+        link: 'https://www.instagram.com/kirilljora',
+        icon: 'instagram.png'
       },
       github: {
-        title: "GitHub",
-        link: "https://github.com/shestmintsev-kirill",
-        icon: "github.png"
+        title: 'GitHub',
+        link: 'https://github.com/shestmintsev-kirill',
+        icon: 'github.png'
       },
       linkedin: {
-        title: "LinkedIn",
-        link: "https://www.linkedin.com/in/KShestmintsev/",
-        icon: "linkedin.png"
+        title: 'LinkedIn',
+        link: 'https://www.linkedin.com/in/KShestmintsev/',
+        icon: 'linkedin.png'
       }
     }
   }),
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 img {
   transition: 0.3s;

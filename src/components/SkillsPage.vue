@@ -1,10 +1,10 @@
 <template>
   <section class="section-outer section-skills">
-    <div class="section-skills-title text-center ">
-      <span>{{ $t("SkillsPage.title") }}</span>
+    <div class="section-skills-title text-center">
+      <span>{{ $t('SkillsPage.title') }}</span>
     </div>
-    <div class="section-skills-text text-center ">
-      <span>{{ $t("SkillsPage.description") }}</span>
+    <div class="section-skills-text text-center">
+      <span>{{ $t('SkillsPage.description') }}</span>
     </div>
     <div class="section-skills-content">
       <div
@@ -25,37 +25,37 @@
 
 <script>
 export default {
-  name: "SkillsPage",
+  name: 'SkillsPage',
   data: () => ({
     skillsList: {
       html: {
-        title: "HTML5",
-        img: "html5.png"
+        title: 'HTML5',
+        img: 'html5.png'
       },
       css: {
-        title: "CSS3",
-        img: "css-3.png"
+        title: 'CSS3',
+        img: 'css-3.png'
       },
       js: {
-        title: "JavaScript",
-        img: "javascript.png"
+        title: 'JavaScript',
+        img: 'javascript.png'
       },
       vuejs: {
-        title: "Vue.js",
-        img: "vue.png"
+        title: 'Vue.js',
+        img: 'vue.png'
       }
     }
   }),
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 .transform {
   transition: 0.3s;
   &:hover {

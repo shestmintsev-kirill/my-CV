@@ -12,15 +12,15 @@
 </template>
 
 <script>
-import HomePage from "@/components/HomePage.vue";
-import AboutPage from "@/components/AboutPage.vue";
-import SkillsPage from "@/components/SkillsPage.vue";
-import PortfolioPage from "@/components/PortfolioPage.vue";
-import ContactPage from "@/components/ContactPage.vue";
-import Loader from "@/components/Loader.vue";
+import HomePage from '@/components/HomePage.vue';
+import AboutPage from '@/components/AboutPage.vue';
+import SkillsPage from '@/components/SkillsPage.vue';
+import PortfolioPage from '@/components/PortfolioPage.vue';
+import ContactPage from '@/components/ContactPage.vue';
+import Loader from '@/components/Loader.vue';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
     HomePage,
     AboutPage,
@@ -46,8 +46,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import "@/assets/scss/style.scss";
-@import "normalize-scss";
+@import '@/assets/scss/style.scss';
+@import 'normalize-scss';
 @include normalize();
 
 * {

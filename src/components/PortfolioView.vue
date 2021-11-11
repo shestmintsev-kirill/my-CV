@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="section-partfolio-title">
-      <span>{{ $t("PortfolioPage.title") }}</span>
+      <span>{{ $t('PortfolioPage.title') }}</span>
     </div>
     <div v-for="(project, i) in portfolio" :key="i" class="section-inner">
       <div class="section-partfolio-project">
@@ -9,14 +9,14 @@
           @click.prevent="$emit('show-modal', project)"
           class="section-partfolio-project-promo"
         >
-          <a><img :src="getImage(`${project.imgView}`)" alt="onlinestore"/></a>
+          <a><img :src="getImage(`${project.imgView}`)" alt="onlinestore" /></a>
           <div class="after">
             {{ $t(project.description) }}
           </div>
         </div>
         <div class="section-partfolio-project-link">
           <a @click.prevent="$emit('show-modal', project)">
-            {{ $t("PortfolioPage.link") }}
+            {{ $t('PortfolioPage.link') }}
           </a>
         </div>
         <div class="section-partfolio-project-title">
@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: "PortfolioView",
+  name: 'PortfolioView',
   props: {
     portfolio: {
       type: Object
@@ -42,14 +42,14 @@ export default {
   },
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     }
   }
 };
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .after {
   line-height: 30px;

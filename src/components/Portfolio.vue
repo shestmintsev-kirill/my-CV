@@ -32,12 +32,12 @@
 </template>
 
 <script>
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel.css";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import VueSlickCarousel from 'vue-slick-carousel';
+import 'vue-slick-carousel/dist/vue-slick-carousel.css';
+import 'vue-slick-carousel/dist/vue-slick-carousel-theme.css';
 
 export default {
-  name: "Portfolio",
+  name: 'Portfolio',
   components: {
     VueSlickCarousel
   },
@@ -57,15 +57,15 @@ export default {
     }
   }),
   mounted() {
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector('body').style.overflow = 'hidden';
     this.arrowCarouselWidth();
   },
   beforeDestroy() {
-    document.querySelector("body").style.overflow = null;
+    document.querySelector('body').style.overflow = null;
   },
   methods: {
     getImage(img) {
-      return require("@/assets/" + img);
+      return require('@/assets/' + img);
     },
     arrowCarouselWidth() {
       if (document.documentElement.clientWidth < 566) {
@@ -79,7 +79,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 * {
   @include font-eng;
   @include font-ru;

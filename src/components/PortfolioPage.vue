@@ -6,79 +6,79 @@
 </template>
 
 <script>
-import Portfolio from "./Portfolio";
-import PortfolioView from "./PortfolioView.vue";
+import Portfolio from './Portfolio';
+import PortfolioView from './PortfolioView.vue';
 export default {
   components: { PortfolioView, Portfolio },
-  name: "PartfolioPage",
+  name: 'PartfolioPage',
   data: () => ({
     show: null,
     portfolio: {
       store: {
-        imgView: "onlinestore.png",
-        description: "PortfolioPage.onlineStore",
-        title: "PortfolioStore.title",
-        link: "https://github.com/shestmintsev-kirill/vuefirstproject",
-        linkToDeploy: "https://onlinestore2-63245.firebaseapp.com/",
-        deploy: "Firebase",
-        gitHub: "Online Store > GitHub",
-        modal: "portfolio.store",
+        imgView: 'onlinestore.png',
+        description: 'PortfolioPage.onlineStore',
+        title: 'PortfolioStore.title',
+        link: 'https://github.com/shestmintsev-kirill/vuefirstproject',
+        linkToDeploy: 'https://onlinestore2-63245.firebaseapp.com/',
+        deploy: 'Firebase',
+        gitHub: 'Online Store > GitHub',
+        modal: 'portfolio.store',
         images: [
-          "onlinestore.png",
-          "productList.png",
-          "productCard.png",
-          "productBuy.png",
-          "productOrder.png",
-          "productEdit.png",
-          "productNew.png"
+          'onlinestore.png',
+          'productList.png',
+          'productCard.png',
+          'productBuy.png',
+          'productOrder.png',
+          'productEdit.png',
+          'productNew.png'
         ]
       },
       movie: {
-        imgView: "movies.png",
-        description: "PortfolioPage.movieApp",
-        title: "PortfolioMovie.title",
-        link: "https://github.com/shestmintsev-kirill/Movies-app",
-        linkToDeploy: "https://shestmintsev-kirill.github.io/Movies-app/",
-        deploy: "GitHub Pages",
-        gitHub: "Movies Top > GitHub",
-        modal: "portfolio.movie",
+        imgView: 'movies.png',
+        description: 'PortfolioPage.movieApp',
+        title: 'PortfolioMovie.title',
+        link: 'https://github.com/shestmintsev-kirill/Movies-app',
+        linkToDeploy: 'https://shestmintsev-kirill.github.io/Movies-app/',
+        deploy: 'GitHub Pages',
+        gitHub: 'Movies Top > GitHub',
+        modal: 'portfolio.movie',
         images: [
-          "movieHome.png",
-          "movies.png",
-          "movieInfo.png",
-          "movieSearch.png",
-          "moviePagination.png"
+          'movieHome.png',
+          'movies.png',
+          'movieInfo.png',
+          'movieSearch.png',
+          'moviePagination.png'
         ]
       },
       ashestmintseva: {
-        imgView: "ashestmintseva_1.png",
-        description: "PortfolioPage.ashestmintseva",
-        title: "Portfolioashestmintseva.title",
-        link: "",
-        linkToDeploy: "https://www.ashestmintseva.ru/",
-        deploy: "ashestmintseva.ru",
-        modal: "portfolio.contact",
+        imgView: 'ashestmintseva_1.png',
+        description: 'PortfolioPage.ashestmintseva',
+        title: 'Portfolioashestmintseva.title',
+        link: '',
+        linkToDeploy: 'https://www.ashestmintseva.ru/',
+        deploy: 'ashestmintseva.ru',
+        modal: 'portfolio.contact',
         images: [
-          "ashestmintseva_3.png",
-          "ashestmintseva_2.png",
-          "ashestmintseva_1.png"
+          'ashestmintseva_3.png',
+          'ashestmintseva_2.png',
+          'ashestmintseva_1.png'
         ]
       },
       contact: {
-        imgView: "contactBook.png",
-        description: "PortfolioPage.contactBook",
-        title: "PortfolioContactBook.title",
-        link: "https://github.com/shestmintsev-kirill/Contact-book",
-        linkToDeploy: "https://shestmintsev-kirill.github.io/Contact-book/",
-        deploy: "GitHub Pages",
-        gitHub: "Contact book > GitHub",
-        modal: "portfolio.contact",
+        imgView: 'contactBook.png',
+        description: 'PortfolioPage.contactBook',
+        title: 'PortfolioContactBook.title',
+        link: 'https://github.com/shestmintsev-kirill/Contact-book',
+        linkToDeploy: 'https://shestmintsev-kirill.github.io/Contact-book/',
+        deploy: 'GitHub Pages',
+        gitHub: 'Contact book > GitHub',
+        modal: 'portfolio.contact',
         images: [
-          "contactBook.png",
-          "contactBookSearch.png",
-          "contactBookAdd.png",
-          "contactBookSort.png",
-          "contactBookEdit.png"
+          'contactBook.png',
+          'contactBookSearch.png',
+          'contactBookAdd.png',
+          'contactBookSort.png',
+          'contactBookEdit.png'
         ]
       }
     }
@@ -95,7 +95,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .after {
   line-height: 30px;

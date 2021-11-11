@@ -10,12 +10,12 @@
 
 <script>
 export default {
-  name: "Loader",
+  name: 'Loader',
   mounted() {
-    document.querySelector("body").style.overflow = "hidden";
+    document.querySelector('body').style.overflow = 'hidden';
   },
   beforeDestroy() {
-    document.querySelector("body").style.overflow = null;
+    document.querySelector('body').style.overflow = null;
   }
 };
 </script>
@@ -49,7 +49,7 @@ $circle-margin: 7px;
   animation: bounce 500ms alternate infinite cubic-bezier(0.2, 0.65, 0.6, 1);
 
   &:before {
-    content: "";
+    content: '';
     width: $circle-size;
     height: $circle-size;
     border-radius: 50%;

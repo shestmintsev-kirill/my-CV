@@ -1,7 +1,7 @@
 <template>
   <section class="section-outer section-about">
     <div class="section-about-title">
-      <span>{{ $t("AboutPage.title") }}</span>
+      <span>{{ $t('AboutPage.title') }}</span>
     </div>
     <div class="section-about-description">
       <i18n path="AboutPage.about">
@@ -17,7 +17,7 @@
           >{{ certificate.title }}</a
         >
         <br /><br />
-        {{ $t("AboutPage.aboutNext") }}
+        {{ $t('AboutPage.aboutNext') }}
       </span>
     </div>
   </section>
@@ -25,18 +25,18 @@
 
 <script>
 export default {
-  name: "AboutPage",
+  name: 'AboutPage',
   data: () => ({
     certificates: {
       first: {
-        title: "JS and Vue |",
+        title: 'JS and Vue |',
         lilnk:
-          "https://www.udemy.com/certificate/UC-53816070-96d5-417b-822d-7b09d970e031/"
+          'https://www.udemy.com/certificate/UC-53816070-96d5-417b-822d-7b09d970e031/'
       },
       second: {
-        title: " Vue project",
+        title: ' Vue project',
         lilnk:
-          "https://www.udemy.com/certificate/UC-13faeecc-8310-4274-b173-fadfa02956d0/"
+          'https://www.udemy.com/certificate/UC-13faeecc-8310-4274-b173-fadfa02956d0/'
       }
     }
   })
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "@/assets/scss/style.scss";
+@import '@/assets/scss/style.scss';
 
 .section-about {
   background: #f6f6f6;
