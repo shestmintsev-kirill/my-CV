@@ -5,12 +5,16 @@
         <div class="section-outer modal-container">
           <div class="section-partfolio-title">
             <div class="section-partfolio-title-back">
-              <a @click="$emit('close-modal')"><img class="back" src="@/assets/back.png" alt="back" /></a>
+              <a @click="$emit('close-modal')">
+                <img class="back" src="@/assets/back.png" alt="back" />
+              </a>
             </div>
             <div class="section-partfolio-title-text">
               <span class="title-wrapper">{{ $t(portfolio.title) }}</span>
               <div class="github">
-                <a v-if="portfolio.link" target="_blank" :href="portfolio.link"><img src="@/assets/github.png" alt="github" /></a>
+                <a v-if="portfolio.link" target="_blank" :href="portfolio.link">
+                  <img src="@/assets/github.png" alt="github" />
+                </a>
               </div>
             </div>
           </div>
@@ -69,6 +73,7 @@ export default {
       } else {
         this.settings.arrows = true;
       }
+      console.log(this);
     }
   }
 };
