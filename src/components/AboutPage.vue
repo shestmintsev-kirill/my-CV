@@ -8,14 +8,6 @@
         <br slot="break" />
       </i18n>
       <span>
-        <a
-          v-for="certificate in certificates"
-          :key="certificate.title"
-          class="section-about-description-link"
-          target="_blank"
-          :href="certificate.link"
-          >{{ certificate.title }}</a>
-        <br /><br />
         {{ $t('AboutPage.aboutNext') }}
       </span>
     </div>
@@ -24,21 +16,7 @@
 
 <script>
 export default {
-  name: 'AboutPage',
-  data: () => ({
-    certificates: {
-      first: {
-        title: 'JS and Vue |',
-        lilnk:
-          'https://www.udemy.com/certificate/UC-53816070-96d5-417b-822d-7b09d970e031/'
-      },
-      second: {
-        title: ' Vue project',
-        lilnk:
-          'https://www.udemy.com/certificate/UC-13faeecc-8310-4274-b173-fadfa02956d0/'
-      }
-    }
-  })
+  name: 'AboutPage'
 };
 </script>
 

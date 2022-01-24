@@ -8,8 +8,8 @@
     </div>
     <div class="section-skills-content">
       <div
-        v-for="item in skillsList"
-        :key="item.title"
+        v-for="(item, i) in skillsList"
+        :key="i"
         class="section-skills-content-vue transform"
       >
         <div class="section-skills-content-vue-logo">
@@ -27,24 +27,32 @@
 export default {
   name: 'SkillsPage',
   data: () => ({
-    skillsList: {
-      html: {
+    skillsList: [
+      {
         title: 'HTML5',
         img: 'html5.png'
       },
-      css: {
+      {
         title: 'CSS3',
         img: 'css-3.png'
       },
-      js: {
+      {
         title: 'JavaScript',
         img: 'javascript.png'
       },
-      vuejs: {
+      {
         title: 'Vue.js',
         img: 'vue.png'
+      },
+      {
+        title: 'React.js',
+        img: 'react.png'
+      },
+      {
+        title: 'TypeScript',
+        img: 'ts.png'
       }
-    }
+    ]
   }),
   methods: {
     getImage(img) {
@@ -77,7 +85,7 @@ export default {
 
   &-title {
     font-weight: bold;
-    font-size: 35px;
+    font-size: 24px;
     letter-spacing: 2px;
     text-align: center;
   }
@@ -93,12 +101,21 @@ export default {
     justify-content: space-between;
 
     &-vue {
-      img {
+      img[alt='skill'] {
         width: 128px;
         height: 128px;
       }
     }
   }
+  @media (max-width: $screen-sm-max) {
+    &-content {
+      img[alt='skill'] {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
+
   @media (max-width: $screen-xs-max) {
     padding-top: 40px;
 
@@ -110,12 +127,22 @@ export default {
     }
     &-content {
       margin-top: 40px;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
 
-      img {
-        width: 90px;
-        height: 90px;
+      img[alt='skill'] {
+        width: 70px;
+        height: 70px;
+      }
+
+      &-vue {
+        width: 100px;
+
+        &-logo {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 5px;
+        }
       }
     }
   }
@@ -130,7 +157,8 @@ export default {
     &-content {
       margin-bottom: 100px;
       margin-top: 80px;
-      img {
+
+      img[alt='skill'] {
         margin-bottom: 20px;
       }
     }

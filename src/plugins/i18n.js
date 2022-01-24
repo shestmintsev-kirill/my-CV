@@ -30,7 +30,7 @@ export const i18n = new VueI18n({
         movieApp:
           'Project - Movies Top 250 using Vue-router, Vuex and Bootstrap-vue',
         contactBook:
-          'Project - Contact book using Vue-router (dynamic route matching), Vuex, LocalStorage',
+          'Project - Contact book using Vue-router, Vuex, LocalStorage',
         ashestmintseva: 'Personal site'
       },
       ContactPage: {
@@ -64,7 +64,7 @@ export const i18n = new VueI18n({
       },
       PortfolioContactBook: {
         title:
-          'Contact book using Vue-router (dynamic route matching), Vuex, LocalStorage'
+          'Contact book using Vue-router, Vuex, LocalStorage'
       },
       Portfolioashestmintseva: {
         title: 'Personal website, analytics, investments'
@@ -78,7 +78,7 @@ export const i18n = new VueI18n({
       AboutPage: {
         title: 'Обо мне',
         about:
-          'Привет, Я Кирилл – Frontend разработчик из Москвы. Я интересуюсь Web-разработкой и всем, что с этим связано{break}{break}Я учусь на курсах, платформы Udemy ',
+          'Привет, Я Кирилл – Frontend разработчик из Москвы. Я интересуюсь Web-разработкой и всем, что с этим связано{break}{break}',
         aboutNext: 'Готов реализовывать проекты с крутой командой'
       },
       SkillsPage: {
@@ -93,7 +93,7 @@ export const i18n = new VueI18n({
         movieApp:
           'Топ 250 фильмов с использованием Vue-router, Vuex и Bootstrap-vue',
         contactBook:
-          'Контактная книга с использованием Vue-router (динамические пути), Vuex, LocalStorage',
+          'Контактная книга с использованием Vue-router, Vuex, LocalStorage',
         ashestmintseva: 'Личный сайт'
       },
       ContactPage: {
@@ -129,7 +129,7 @@ export const i18n = new VueI18n({
       },
       PortfolioContactBook: {
         title:
-          'Контактная книга с использованием Vue-router (динамические пути), Vuex, LocalStorage'
+          'Контактная книга с использованием Vue-router, Vuex, LocalStorage'
       },
       Portfolioashestmintseva: {
         title: 'Личный сайт, аналитика, инвестиции'

@@ -82,7 +82,7 @@ export default {
   },
   mounted() {
     document.querySelector('body').style.overflow = 'hidden';
-    this.focusInput();
+    this.$refs.input.focus();
   },
   beforeDestroy() {
     document.querySelector('body').style.overflow = null;
@@ -90,9 +90,6 @@ export default {
   methods: {
     confirm(e, num) {
       e.length > num ? (this.isDisabled = false) : (this.isDisabled = true);
-    },
-    focusInput() {
-      this.$refs.input.focus();
     }
   }
 };

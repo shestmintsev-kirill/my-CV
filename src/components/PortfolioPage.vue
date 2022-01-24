@@ -13,8 +13,8 @@ export default {
   components: { PortfolioView, Portfolio },
   data: () => ({
     show: null,
-    portfolio: {
-      store: {
+    portfolio: [
+      {
         imgView: 'onlinestore.png',
         description: 'PortfolioPage.onlineStore',
         title: 'PortfolioStore.title',
@@ -33,7 +33,7 @@ export default {
           'productNew.png'
         ]
       },
-      movie: {
+      {
         imgView: 'movies.png',
         description: 'PortfolioPage.movieApp',
         title: 'PortfolioMovie.title',
@@ -50,7 +50,7 @@ export default {
           'moviePagination.png'
         ]
       },
-      ashestmintseva: {
+      {
         imgView: 'ashestmintseva_1.png',
         description: 'PortfolioPage.ashestmintseva',
         title: 'Portfolioashestmintseva.title',
@@ -64,7 +64,7 @@ export default {
           'ashestmintseva_1.png'
         ]
       },
-      contact: {
+      {
         imgView: 'contactBook.png',
         description: 'PortfolioPage.contactBook',
         title: 'PortfolioContactBook.title',
@@ -81,7 +81,7 @@ export default {
           'contactBookEdit.png'
         ]
       }
-    }
+    ]
   }),
   methods: {
     showModal(e) {

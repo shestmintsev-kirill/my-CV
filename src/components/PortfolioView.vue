@@ -9,7 +9,9 @@
           class="section-partfolio-project-promo"
           @click.prevent="$emit('show-modal', project)"
         >
-          <a><img :src="getImage(`${project.imgView}`)" alt="onlinestore" /></a>
+          <a>
+            <img :src="getImage(`${project.imgView}`)" alt="onlinestore" />
+          </a>
           <div class="after">
             {{ $t(project.description) }}
           </div>
@@ -37,7 +39,7 @@ export default {
   name: 'PortfolioView',
   props: {
     portfolio: {
-      type: Object
+      type: Array
     }
   },
   methods: {

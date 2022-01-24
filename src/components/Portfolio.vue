@@ -73,7 +73,6 @@ export default {
       } else {
         this.settings.arrows = true;
       }
-      console.log(this);
     }
   }
 };
