@@ -10,12 +10,12 @@ export const i18n = new VueI18n({
     en: {
       HomePage: {
         name: 'Kirill{break}Shestmintsev',
-        profession: 'Frontend developer{break}23 years old, Moscow'
+        profession: 'Frontend developer{break}25 years old'
       },
       AboutPage: {
         title: 'About me',
         about:
-          'Hi, I\'m Kirill – Frontend developer from Moscow. I\'m interestedin web development and everything connected with it.{break}{break}I finished courses on Udemy platform ',
+          'Hi, I\'m Kirill – Frontend developer. I\'m interested in web development and everything connected with it.{break}{break}I finished courses on Udemy platform ',
         aboutNext: 'I am ready to implement projects with a cool team'
       },
       SkillsPage: {
@@ -73,12 +73,12 @@ export const i18n = new VueI18n({
     ru: {
       HomePage: {
         name: 'Кирилл {break} Шестминцев',
-        profession: 'Frontend разработчик{break}23 года, Москва'
+        profession: 'Frontend разработчик{break}25 лет'
       },
       AboutPage: {
         title: 'Обо мне',
         about:
-          'Привет, Я Кирилл – Frontend разработчик из Москвы. Я интересуюсь Web-разработкой и всем, что с этим связано{break}{break}',
+          'Привет, Я Кирилл – Frontend разработчик. Я интересуюсь Web-разработкой и всем, что с этим связано{break}{break}',
         aboutNext: 'Готов реализовывать проекты с крутой командой'
       },
       SkillsPage: {
